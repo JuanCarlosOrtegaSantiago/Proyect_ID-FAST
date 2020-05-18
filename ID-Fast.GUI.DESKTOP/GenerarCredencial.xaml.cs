@@ -25,14 +25,14 @@ namespace ID_Fast.GUI.DESKTOP
     public partial class GenerarCredencial : Window
     {
         Alumno _alumno;
-        public GenerarCredencial( Alumno alumno)
+        public GenerarCredencial(Alumno alumno)
         {
             InitializeComponent();
             _alumno = alumno;
 
             lblCarrera.Content = _alumno.Carrera;
             lblMatricula.Content = _alumno.Matricula;
-            lblNombre.Content = string.Format("{0} {1}",_alumno.Nombre,_alumno.Apellidos);
+            lblNombre.Content = string.Format("{0} {1}", _alumno.Nombre, _alumno.Apellidos);
             IMGUsuario.Source = ByteToImagen(_alumno.Foto);
             lblFechadeIngreso.Content = _alumno.FechaIngreso.ToShortDateString();
             lblNumSeguro.Content = _alumno.Num_Seguro;
@@ -41,12 +41,19 @@ namespace ID_Fast.GUI.DESKTOP
             //QRCodeData codeData = qr.CreateQrCode("ES un ejemplo", QRCodeGenerator.ECCLevel.Q);
             //QRCode code = new QRCode(codeData);
             //QrCodeImage.Source = code.GetGraphic(5);
+            //string DatosQR;
+            //DatosQR = string.Format("\t\n--- Datos de salud ---\n\nNumero de seguro social= {0}\nTipo de sangre= {1} Alergias= {2}\n", , _alumno.TipoDeSangre, _alumno.Alergias
+            //    );
+            //"\t--- Datos de Usuario ---\n" +
+            //    "Nombre= {0} {1}\n", _alumno.Nombre, _alumno.Apellidos +
+            //    "Carrera= {2}\n", _alumno.Carrera +
+            //    "Semestre= {3}\n", _alumno.Semestre +
 
             QrEncoder encoder = new QrEncoder(ErrorCorrectionLevel.M);
             QrCode qrCode;
-            encoder.TryEncode(_alumno.Matricula, out qrCode);
+            encoder.TryEncode(string.Format("{0}\n{1}",_alumno.Num_Seguro,_alumno.TipoDeSangre), out qrCode);
             WriteableBitmapRenderer wRenderer = new WriteableBitmapRenderer(new FixedModuleSize(2, QuietZoneModules.Two), Colors.Black, Colors.White);
-            WriteableBitmap wBitmap = new WriteableBitmap(60, 60, 60, 60, PixelFormats.Gray8, null);
+            WriteableBitmap wBitmap = new WriteableBitmap(50, 50, 50, 50, PixelFormats.Gray8, null);
             wRenderer.Draw(wBitmap, qrCode.Matrix);
 
             QrCodeImage.Source = null;

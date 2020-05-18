@@ -5,18 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ID_Fast.GUI.DESKTOP"
         mc:Ignorable="d"
-        Height="200" Width="350" Background="#FFD1C9C9" WindowStyle="None" MaxWidth="650" MaxHeight="300" WindowStartupLocation="CenterScreen" >
+        Height="300" Width="500" Background="#FFD1C9C9" WindowStyle="None" MaxWidth="650" MaxHeight="300" WindowStartupLocation="CenterScreen" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="*"/>
             <!--<RowDefinition Height="*"/>-->
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -30,15 +32,35 @@
         </WrapPanel>
 
         <WrapPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,5" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btnReguistrar" Click="BtnReguistrar_Click">Reguistrar</Button>
+            <Button x:Name="btnReguistrar" Click="BtnReguistrar_Click" Background="Transparent" Width="80" Height="100">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="IMG/registro.png" Width="60" Height="60"></Image>
+                    <Label FontWeight="Black">Reguistrar</Label>
+                </WrapPanel>
+            </Button>
         </WrapPanel>
 
         <WrapPanel Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Margin="10,5" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="btnConsultar" Click="BtnConsultar_Click">Consultar</Button>
+            <Button x:Name="btnConsultar" Click="BtnConsultar_Click" Background="Transparent" Width="80" Height="100">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="IMG/consultar.png" Width="60" Height="60"></Image>
+                    <Label FontWeight="Black">Consultar</Label>
+                </WrapPanel>
+            </Button>
         </WrapPanel>
 
-        <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="3">
-            <Button x:Name="btnRegresar" Click="BtnRegresar_Click">Regresar</Button>
+        <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="2">
+            <Button x:Name="btnRegresar" Click="BtnRegresar_Click" Background="Transparent" Width="80" Height="100">
+                <WrapPanel Orientation="Vertical">
+                    <Image Source="IMG/Regresar.png" Width="60" Height="60"></Image>
+                    <Label FontWeight="Black">Regresar</Label>
+                </WrapPanel>
+            </Button>
+        </WrapPanel>
+
+        <WrapPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Column="7" Grid.ColumnSpan="2" Grid.Row="2">
+            <Label x:Name="LblLicencia" MouseMove="LblLicencia_MouseMove" MouseLeftButtonUp="LblLicencia_MouseLeftButtonUp" >Licencia</Label>
+        <!--<Label x:Name="lblLikcencia" >Licencia</Label>-->
         </WrapPanel>
         
     </Grid>
