@@ -24,34 +24,25 @@ namespace ID_Fast.GUI.DESKTOP
             InitializeComponent();
         }
 
-        private void BtnAceptar_Click(object sender, RoutedEventArgs e)
-        {
-            if (RdBtnAlumno.IsChecked == false && RdBtnDocente.IsChecked == false)
-            {
-                MessageBox.Show("Aun no has seleccionado ningun tipo de usuario", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else
-            {
-                if (RdBtnAlumno.IsChecked == true)
-                {
-                    MainWindow mainWindow= new MainWindow();
-                    this.Close();
-                    mainWindow.Show();
-                }
-                else
-                {
-                    ConsultarDocentes consultarDocentes= new ConsultarDocentes();
-                    this.Close();
-                    consultarDocentes.Show();
-                }
-            }
-        }
-
         private void BtnRegresar_Click(object sender, RoutedEventArgs e)
         {
             MenuOperaciones menuOperaciones = new MenuOperaciones();
             this.Close();
             menuOperaciones.Show();
+        }
+
+        private void BtnProfesor_Click(object sender, RoutedEventArgs e)
+        {
+            ConsultarDocentes consultarDocentes = new ConsultarDocentes();
+            this.Close();
+            consultarDocentes.Show();
+        }
+
+        private void BtnAlumnos_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            this.Close();
+            mainWindow.Show();
         }
     }
 }

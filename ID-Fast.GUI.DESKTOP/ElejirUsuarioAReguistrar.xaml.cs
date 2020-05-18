@@ -24,34 +24,26 @@ namespace ID_Fast.GUI.DESKTOP
             InitializeComponent();
         }
 
-        private void BtnAceptar_Click(object sender, RoutedEventArgs e)
-        {
-            if (RdBtnAlumno.IsChecked == false && RdBtnDocente.IsChecked == false)
-            {
-                MessageBox.Show("Aun no has seleccionado ningun tipo de usuario", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else
-            {
-                if (RdBtnAlumno.IsChecked == true)
-                {
-                    Reguistro reguistro = new Reguistro(false,null);
-                    this.Close();
-                    reguistro.Show();
-                }
-                else
-                {
-                    ReguistroDocente reguistroDocente = new ReguistroDocente(false,null);
-                    this.Close();
-                    reguistroDocente.Show();
-                }
-            }
-        }
 
         private void BtnRegresar_Click(object sender, RoutedEventArgs e)
         {
             MenuOperaciones menuOperaciones = new MenuOperaciones();
             this.Close();
             menuOperaciones.Show();
+        }
+
+        private void BtnAlumnos_Click(object sender, RoutedEventArgs e)
+        {
+            Reguistro reguistro = new Reguistro(false, null);
+            this.Close();
+            reguistro.Show();
+        }
+
+        private void BtnProfesor_Click(object sender, RoutedEventArgs e)
+        {
+            ReguistroDocente reguistroDocente = new ReguistroDocente(false, null);
+            this.Close();
+            reguistroDocente.Show();
         }
     }
 }

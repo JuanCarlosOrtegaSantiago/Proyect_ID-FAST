@@ -22,7 +22,6 @@ namespace ID_Fast.GUI.DESKTOP
         public MenuOperaciones()
         {
             InitializeComponent();
-            LblLicencia.Foreground = new SolidColorBrush(Colors.Black);
 
         }
         
@@ -47,16 +46,11 @@ namespace ID_Fast.GUI.DESKTOP
             ingresoAlSistema.Show();
         }
 
-        private void LblLicencia_MouseMove(object sender, MouseEventArgs e)
-        {
-            LblLicencia.Foreground = new SolidColorBrush(Colors.Blue);
-        }
-
-        private void LblLicencia_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            LblLicencia.Foreground = new SolidColorBrush(Colors.Red);
-            MessageBox.Show("fue presionado");
-        }
+        //private void LblLicencia_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        //{
+        //    LblLicencia.Foreground = new SolidColorBrush(Colors.Blue);
+        //    MessageBox.Show("fue presionado");
+        //}
         
     }
 }

@@ -234,6 +234,21 @@
     <Resource Include="IMG\registro.png" />
     <Resource Include="IMG\Regresar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\estudiante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\Profesor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\elminarC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\credencial.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
