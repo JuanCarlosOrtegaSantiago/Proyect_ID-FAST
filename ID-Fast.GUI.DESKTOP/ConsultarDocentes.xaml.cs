@@ -70,5 +70,14 @@ namespace ID_Fast.GUI.DESKTOP
                 ActualizarLista();
             }
         }
+
+        private void BtnGenerarCredencialDocente_Click(object sender, RoutedEventArgs e)
+        {
+            if (ListDocentes.SelectedItem != null)
+            {
+                CredencialesDocentes generarCredencialesDocente = new CredencialesDocentes(ListDocentes.SelectedItem as Docentes);
+                generarCredencialesDocente.ShowDialog();
+            }
+        }
     }
 }

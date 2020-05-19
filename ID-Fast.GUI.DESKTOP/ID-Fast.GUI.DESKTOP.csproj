@@ -102,6 +102,9 @@
     <Compile Include="ConsultarDocentes.xaml.cs">
       <DependentUpon>ConsultarDocentes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CredencialesDocentes.xaml.cs">
+      <DependentUpon>CredencialesDocentes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ElejirUsuarioAReguistrar.xaml.cs">
       <DependentUpon>ElejirUsuarioAReguistrar.xaml</DependentUpon>
     </Compile>
@@ -125,6 +128,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ConsultarDocentes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CredencialesDocentes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -248,6 +255,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="IMG\credencial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\Aceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\Salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\Entrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IMG\Salud.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" />

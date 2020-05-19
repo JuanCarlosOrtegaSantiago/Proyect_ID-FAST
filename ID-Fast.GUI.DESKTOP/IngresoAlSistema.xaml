@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ID_Fast.GUI.DESKTOP"
         mc:Ignorable="d"
-Height="400" Width="400" Background="#FFD1C9C9" MinWidth="350" MinHeight="350" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="500" MaxHeight="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" UseLayoutRounding="False" Padding="2" WindowStyle="None" WindowStartupLocation="CenterScreen" Cursor="">
+Height="400" Width="450" Background="#FFD1C9C9" MinWidth="350" MinHeight="350" HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="500" MaxHeight="500" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" UseLayoutRounding="False" Padding="2" WindowStyle="None" WindowStartupLocation="CenterScreen" Cursor="">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -48,8 +48,18 @@ Height="400" Width="400" Background="#FFD1C9C9" MinWidth="350" MinHeight="350" H
         </StackPanel>
 
         <WrapPanel Orientation="Horizontal" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="BtnEntrar" Click="BtnEntrar_Click" Width="100" Height="30" FontSize="20" VerticalContentAlignment="Center" VerticalAlignment="Center" Margin="20,0" Foreground="Black" >Entrar</Button>
-            <Button x:Name="BtnSalir" Click="BtnSalir_Click" Width="100" Height="30" FontSize="20" VerticalContentAlignment="Center" VerticalAlignment="Center" Margin="20,0" Foreground="Black">Salir</Button>
+            <Button x:Name="BtnEntrar" Click="BtnEntrar_Click" Width="150" Height="40" FontSize="20" VerticalContentAlignment="Center" VerticalAlignment="Center" Margin="20,0" Foreground="Black" >
+                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,0">Entrar</Label>
+                    <Image Source="IMG/Entrar.png" Width="20" Height="20"/>
+                </WrapPanel>
+            </Button>
+            <Button x:Name="BtnSalir" Click="BtnSalir_Click" Width="150" Height="40" FontSize="20" VerticalContentAlignment="Center" VerticalAlignment="Center" Margin="20,0" Foreground="Black">
+                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,0">Salir</Label>
+                    <Image Source="IMG/Salir.png" Width="20" Height="20"/>
+                </WrapPanel>
+            </Button>
         </WrapPanel>
 
         <!--<WrapPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center">

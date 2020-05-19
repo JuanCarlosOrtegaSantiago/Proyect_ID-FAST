@@ -1,11 +1,11 @@
-﻿<Window x:Class="ID_Fast.GUI.DESKTOP.GenerarCredencial"
+﻿<Window x:Class="ID_Fast.GUI.DESKTOP.CredencialesDocentes"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ID_Fast.GUI.DESKTOP"
         mc:Ignorable="d"
-        Title="GenerarCredencial" Height="600" Width="950" Background="#FFD1C9C9" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="CredencialesDocentes" Height="600" Width="950" Background="#FFD1C9C9" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -105,21 +105,19 @@
                 </WrapPanel>
                 <Label  VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4">NOMBRE:</Label>
                 <Label VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5">MATRICULA:</Label>
-                <Label VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6">CARRERA:</Label>
-                <Label VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" >Fecha de ingreso</Label>
-                <Label x:Name="lblFechadeIngreso" FontSize="10" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="2"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,-10" ></Label>
-                <Label FontSize="10" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,-5">NSS</Label>
-                <Label x:Name="lblNumSeguro" FontSize="10" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,-5"></Label>
+                <Label VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="6">AREA:</Label>
+                <Label FontSize="10" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,-5">NSS</Label>
+                <Label x:Name="lblNumSeguro" FontSize="10" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" ></Label>
 
                 <Image VerticalAlignment="Top"  Grid.Column="5" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" Width="120" Source="IMG/iteshu.png" HorizontalAlignment="Right"></Image>
-                
+
 
                 <Label Grid.Column="4" Grid.Row="6" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Right">Firma:</Label>
                 <Label Grid.Column="4" Grid.ColumnSpan="3" Grid.Row="6" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Right">________________________________________________</Label>
 
                 <Label FontSize="10" x:Name="lblNombre" VerticalAlignment="Top" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="4"></Label>
                 <Label FontSize="10" x:Name="lblMatricula" VerticalAlignment="Top" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="5"></Label>
-                <Label FontSize="10" x:Name="lblCarrera" VerticalAlignment="Top" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="6"></Label>
+                <Label FontSize="10" x:Name="lblArea" VerticalAlignment="Top" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="6"></Label>
 
                 <Image Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="3" Name="QrCodeImage" Margin="10,0,10,0" Height="90" Width="100" />
 
@@ -151,11 +149,11 @@
 
                 <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="8" Background="Black"></Label>
                 <Image Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="2" Source="IMG/barcode.png"/>
-                
+
                 <Label Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,-8">Direccion general</Label>
-                
+
                 <Separator Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="4" VerticalAlignment="Bottom" Background="Black"/>
-                
+
                 <WrapPanel Orientation="Vertical" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="6" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top">
                     <Label FontSize="10" HorizontalAlignment="Center">Mtra. Imelda Perez Espinoza</Label>
                     <Label FontSize="10" HorizontalAlignment="Center">Dom. Conocido s/n El saucillo, Huichapan, Hgo. C.P. 42411</Label>
@@ -178,7 +176,7 @@
                 </WrapPanel>
             </Button>
         </WrapPanel>
-        
+
         <!--<Border CornerRadius="10" BorderThickness="5,4,4,4" >
             
         <Frame Background="White">
@@ -187,7 +185,7 @@
         </Border>-->
         <!--<WrapPanel  Background="White" >
         </WrapPanel>-->
-            
+
 
     </Grid>
 </Window>

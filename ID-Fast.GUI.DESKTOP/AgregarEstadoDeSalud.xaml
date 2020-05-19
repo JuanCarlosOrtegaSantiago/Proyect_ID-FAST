@@ -12,7 +12,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -43,7 +43,12 @@
         </WrapPanel>
         
         <WrapPanel Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button x:Name="BtnGuardar" Click="BtnGuardar_Click" Width="100" Height="30">Guardar</Button>
+            <Button x:Name="BtnGuardar" Click="BtnGuardar_Click" Width="100" Height="50" >
+                <WrapPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center" >
+                    <Image Source="IMG/Guardar.png" Width="30" Height="30"/>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center">Guardar</Label>
+                </WrapPanel>
+            </Button>
         </WrapPanel>
         
         

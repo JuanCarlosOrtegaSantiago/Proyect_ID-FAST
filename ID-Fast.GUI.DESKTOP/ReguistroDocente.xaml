@@ -111,7 +111,12 @@
 
             <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                <Button x:Name="BtnEstadoSalud" Click="BtnEstadoSalud_Click" Height="30">Agregar estado de salud</Button>
+                <Button x:Name="BtnEstadoSalud" Click="BtnEstadoSalud_Click" Height="70">
+                    <WrapPanel Orientation="Vertical" HorizontalAlignment="Center" >
+                        <Image Source="IMG/Salud.png" Width="40" Height="40"/>
+                        <Label HorizontalAlignment="Center" VerticalAlignment="Center">Agregar estado de salud</Label>
+                    </WrapPanel>
+                </Button>
 
             </WrapPanel>
 
@@ -130,11 +135,31 @@
         </WrapPanel>
 
         <WrapPanel Grid.Column="1" Grid.Row="12" Grid.ColumnSpan="7" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="BtnReguistrar" Click="BtnReguistrar_Click" Width="100" Height="30" Margin="10,0">Reguistrar</Button>
-            <Button x:Name="BtnNuevo" Click="BtnNuevo_Click" Width="100" Height="30" Margin="10,0">Nuevo</Button>
+            <Button x:Name="BtnReguistrar" Click="BtnReguistrar_Click" Width="100" Height="40" Margin="10,0">
+                <WrapPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center" >
+                    <Image Source="IMG/guardar.png" Width="20" Height="20"/>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center">Guardar</Label>
+                </WrapPanel>
+            </Button>
+            <Button x:Name="BtnNuevo" Click="BtnNuevo_Click" Width="100" Height="40" Margin="10,0">
+                <WrapPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center" >
+                    <Image Source="IMG/nuevo.png" Width="20" Height="20"/>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center">Nuevo</Label>
+                </WrapPanel>
+            </Button>
             <!--<Button Width="100" Height="30" Margin="10,0"></Button>-->
-            <Button x:Name="BtnCancelar" Click="BtnCancelar_Click" Width="100" Height="30" Margin="10,0">Cancelar</Button>
-            <Button Width="100" Height="30" x:Name="BtnRegresar" Click="BtnRegresar_Click" Margin="10,0">Regresar</Button>
+            <Button x:Name="BtnCancelar" Click="BtnCancelar_Click" Width="100" Height="40" Margin="10,0">
+                <WrapPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center" >
+                    <Image Source="IMG/Cancel.png" Width="20" Height="20"/>
+                    <Label HorizontalAlignment="Center" VerticalAlignment="Center">Cancelar</Label>
+                </WrapPanel>
+            </Button>
+            <Button Width="100" Height="40" x:Name="BtnRegresar" Click="BtnRegresar_Click" Margin="10,0">
+                <WrapPanel Orientation="Horizontal">
+                    <Image Source="IMG/Regresar.png" Width="20" Height="20"></Image>
+                    <Label >Regresar</Label>
+                </WrapPanel>
+            </Button>
         </WrapPanel>
     </Grid>
 </Window>
