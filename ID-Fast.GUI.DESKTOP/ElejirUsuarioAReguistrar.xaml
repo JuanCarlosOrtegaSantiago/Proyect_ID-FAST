@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ID_Fast.GUI.DESKTOP"
         mc:Ignorable="d"
-        Title="ElejirUsuarioAReguistrar" Height="300" Width="350" WindowStartupLocation="CenterScreen" Background="#FFD1C9C9" WindowStyle="None">
+        Title="ElejirUsuarioAReguistrar" Height="300" Width="450" WindowStartupLocation="CenterScreen" Background="#FFD1C9C9" WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="10"/>
@@ -21,7 +22,7 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
 
-        <WrapPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,10">
+        <WrapPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,10">
             <Label  FontSize="15">¿Qué tipo de usuarios desea reguistrar?</Label>
         </WrapPanel>
 
@@ -39,7 +40,14 @@
             </WrapPanel>
         </Button>
 
-        <Button Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" BorderBrush="White" x:Name="Regresar" Click="BtnRegresar_Click" VerticalAlignment="Center" Margin="10,0">
+        <Button Grid.Column="3" Grid.Row="2" BorderBrush="White" Margin="15" VerticalAlignment="Center">
+            <WrapPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
+                <Image Source="IMG/admin.png" Width="100" Height="100" HorizontalAlignment="Center"></Image>
+                <Label HorizontalAlignment="Center" VerticalAlignment="Center">Administrativos</Label>
+            </WrapPanel>
+        </Button>
+        
+        <Button Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" BorderBrush="White" x:Name="Regresar" Click="BtnRegresar_Click" VerticalAlignment="Center" Margin="10,0">
             <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
                 <Image Source="IMG/Regresar.png" Width="20" Height="20" HorizontalAlignment="Center"></Image>
                 <Label HorizontalAlignment="Center" VerticalAlignment="Center">Regresar</Label>
