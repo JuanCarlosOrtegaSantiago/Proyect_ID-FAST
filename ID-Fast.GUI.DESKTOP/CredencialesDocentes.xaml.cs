@@ -37,7 +37,7 @@ namespace ID_Fast.GUI.DESKTOP
 
             QrEncoder encoder = new QrEncoder(ErrorCorrectionLevel.M);
             QrCode qrCode;
-            encoder.TryEncode(string.Format("{0}\n{1}", _docente.Num_Seguro, _docente.TipoDeSangre), out qrCode);
+            encoder.TryEncode(string.Format(_docente.Num_Seguro), out qrCode);
             WriteableBitmapRenderer wRenderer = new WriteableBitmapRenderer(new FixedModuleSize(2, QuietZoneModules.Two), Colors.Black, Colors.White);
             WriteableBitmap wBitmap = new WriteableBitmap(50, 50, 50, 50, PixelFormats.Gray8, null);
             wRenderer.Draw(wBitmap, qrCode.Matrix);
